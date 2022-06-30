@@ -1,0 +1,176 @@
+jenkins:
+  authorizationStrategy: "cloudBeesRoleBasedAccessControl"
+  disabledAdministrativeMonitors:
+  - "com.cloudbees.jenkins.support.impl.cloudbees.TcpSlaveAgentListenerMonitor"
+  globalNodeProperties:
+  - envVars:
+      env:
+      - key: "ACC_DEFAULT_SLACK_TEAM_CHANNEL"
+        value: "<TEAM_SLACK_CHANNEL_NAME>"
+  numExecutors: 0
+  updateCenter:
+    sites:
+    - id: "virtual-cap-core-mm"
+      url: "https://jenkins-updates.cloudbees.com/update-center/envelope-core-mm/update-center.json"
+advisor:
+  acceptToS: true
+  email: "liquid-schwartz@accolade.com"
+  excludedComponents:
+  - "GCLogs"
+  - "Agents"
+  - "AgentsConfigFile"
+  - "ConfigFileComponent"
+  - "RootCAs"
+  - "SlaveLogs"
+  - "OtherConfigFilesComponent"
+  - "HeapUsageHistogram"
+  nagDisabled: false
+notificationConfiguration:
+  enabled: true
+  router: "operationsCenter"
+security:
+  anonymizeSupportBundle:
+    enabled: true
+unclassified:
+  rules:
+    rules:
+    - pattern: ".*/timeline/data/"
+      response:
+        code: 403
+        content: |-
+          <h1>Forbidden call</h1>
+          Call forbidden due to large amount of build history.
+          If you desire to use this functionality, clean up your history and contact Liquid Schwartz.
+    - pattern: ".+[/\\\\]securityRealm[/\\\\]finishLogin.*"
+      response:
+        code: 403
+        content: |2
+
+          <h1>Forbidden call</h1>
+          For more information, please visit the <a href="https://cloudbees.com/r/support/cloudbees-security-advisory-2021-08-31">following page</a>
+          or <a href="https://support.cloudbees.com">contact CloudBees support</a> mentioning SECURITY-2469.
+        contentType: "text/html"
+  artifactManager:
+    artifactManagerFactories:
+      - "jSync"
+  artifactoryBuilder:
+    jfrogInstances:
+    - artifactoryUrl: "https://accolade.jfrog.io/artifactory"
+      bypassProxy: false
+      connectionRetry: 3
+      deployerCredentialsConfig:
+        credentialsId: "cloudbees-artifactory"
+        overridingCredentials: false
+      deploymentThreads: 3
+      instanceId: "accolade.jfrog.io"
+      timeout: 300
+    jfrogPipelinesServer:
+      credentialsConfig:
+        ignoreCredentialPluginDisabled: true
+    useCredentialsPlugin: true
+  defaultFolderConfiguration:
+    healthMetrics:
+    - worstChildHealthMetric:
+        recursive: false
+  gitHubPluginConfig:
+    configs:
+    - credentialsId: "konciergeMD-secret"
+      name: "accolade"
+  gitSCM:
+    createAccountBasedOnEmail: false
+    showEntireCommitSummaryInChanges: false
+    useExistingAccountWithSameEmail: false
+  openTelemetry:
+    authentication:
+      bearerTokenAuthentication:
+        tokenId: "kibana-auth-token-prod"
+    endpoint: "https://d421bac619204ac8904e05c9f1d41789.apm.us-east-1.aws.found.io"
+    exportOtelConfigurationAsEnvironmentVariables: false
+    exporterIntervalMillis: 60000
+    exporterTimeoutMillis: 30000
+    ignoredSteps: "dir,echo,isUnix,pwd,properties"
+    observabilityBackends:
+    - elastic:
+        kibanaBaseUrl: "https://7f316c7160264d15bb4a4fa2edb097c5.us-east-1.aws.found.io:9243"
+    serviceName: "cloudbees-ci"
+    serviceNamespace: "<MASTER_NAME>"
+  globalLibraries:
+    libraries:
+    - defaultVersion: "v1"
+      name: "v1-jenkins-pipeline-library-java"
+      retriever:
+        modernSCM:
+          scm:
+            github:
+              configuredByUrl: true
+              credentialsId: "konciergeMD-github-app"
+              repoOwner: "konciergeMD"
+              repository: "jenkins-pipeline-library-java"
+              repositoryUrl: "https://github.com/konciergeMD/jenkins-pipeline-library-java"
+              traits:
+              - gitHubBranchDiscovery:
+                  strategyId: 1
+              - gitHubPullRequestDiscovery:
+                  strategyId: 1
+              - gitHubForkDiscovery:
+                  strategyId: 1
+                  trust: "gitHubTrustPermissions"
+    - defaultVersion: "v1"
+      name: "v1-jenkins-pipeline-library-js"
+      retriever:
+        modernSCM:
+          scm:
+            github:
+              configuredByUrl: true
+              credentialsId: "konciergeMD-github-app"
+              repoOwner: "konciergeMD"
+              repository: "jenkins-pipeline-library-js"
+              repositoryUrl: "https://github.com/konciergeMD/jenkins-pipeline-library-js"
+              traits:
+              - gitHubBranchDiscovery:
+                  strategyId: 1
+              - gitHubPullRequestDiscovery:
+                  strategyId: 1
+              - gitHubForkDiscovery:
+                  strategyId: 1
+                  trust: "gitHubTrustPermissions"
+    - defaultVersion: "v1"
+      name: "v1-jenkins-pipeline-library-python"
+      retriever:
+        modernSCM:
+          scm:
+            github:
+              configuredByUrl: true
+              credentialsId: "konciergeMD-github-app"
+              repoOwner: "konciergeMD"
+              repository: "jenkins-pipeline-library-python"
+              repositoryUrl: "https://github.com/konciergeMD/jenkins-pipeline-library-python"
+              traits:
+              - gitHubBranchDiscovery:
+                  strategyId: 1
+              - gitHubPullRequestDiscovery:
+                  strategyId: 1
+              - gitHubForkDiscovery:
+                  strategyId: 1
+                  trust: "gitHubTrustPermissions"
+    - defaultVersion: "v1"
+      name: "v1-jenkins-pipeline-library"
+      retriever:
+        modernSCM:
+          scm:
+            github:
+              configuredByUrl: true
+              credentialsId: "konciergeMD-github-app"
+              repoOwner: "konciergeMD"
+              repository: "jenkins-pipeline-library"
+              repositoryUrl: "https://github.com/konciergeMD/jenkins-pipeline-library"
+              traits:
+              - gitHubBranchDiscovery:
+                  strategyId: 1
+              - gitHubPullRequestDiscovery:
+                  strategyId: 1
+              - gitHubForkDiscovery:
+                  strategyId: 1
+                  trust: "gitHubTrustPermissions"
+  timestamper:
+    allPipelines: true

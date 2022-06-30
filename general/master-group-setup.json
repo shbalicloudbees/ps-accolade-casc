@@ -1,0 +1,35 @@
+{
+  "name": "root",
+  "groups": [
+    {
+      "name": "<TEAM_NAME_SHORT>AdminGroup",
+      "assignees": [
+        "<TEAM_LEAD_EMAIL_ADDR>"
+      ],
+      "roles": [
+        "Administrator"
+      ],
+      "level": 0,
+      "propagation": "true"
+    }
+  ],
+  "children": [
+    {
+      "name": "components",
+      "groups": [
+        {
+          "name": "<TEAM_NAME_SHORT>ComponentsGroup",
+          "assignees": [
+            "authenticated"
+          ],
+          "roles": [
+            "Developer"
+          ],
+          "level": 0,
+          "propagation": "true"
+        }
+      ],
+      "children": []
+    }
+  ]
+}
