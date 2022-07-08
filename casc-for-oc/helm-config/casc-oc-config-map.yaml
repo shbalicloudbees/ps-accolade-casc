@@ -110,42 +110,6 @@ data:
         autoUpgradePlugins: true
     cloudBeesCasCServer:
       visibility: true
-    license:
-      certificate: "-----BEGIN CERTIFICATE-----\r\nMIIGfTCCBGWgAwIBAgIEAMQhtzANBgkqhkiG9w0BAQUFADBKMQswCQYDVQQGEwJV\r\
-        \nUzERMA8GA1UECAwIRGVsYXdhcmUxDjAMBgNVBAcMBUxld2VzMRgwFgYDVQQKDA9D\r\nbG91ZEJlZXMsIEluYy4wHhcNMjIwNjMwMDAwMDAwWhcNMjMwNzE0MjM1OTU5WjCC\r\
-        \nAnkxETAPBgorBgEEAYKpfwEBEwEzMTAwLgYKKwYBBAGCqX8BAhMgNTY3NzQ2MmEx\r\nMWNiNjBkYWU1MTY1OTE2MTRiMzhiMDQxFTATBgsrBgEEAYKpfwELDhMEdHJ1ZTEV\r\
-        \nMBMGCysGAQQBgql/AQsNEwR0cnVlMRUwEwYLKwYBBAGCqX8BCxATBHRydWUxFTAT\r\nBgsrBgEEAYKpfwELDxMEdHJ1ZTEVMBMGCysGAQQBgql/AQsKEwR0cnVlMRUwEwYL\r\
-        \nKwYBBAGCqX8BCwwTBHRydWUxFTATBgsrBgEEAYKpfwELCxMEdHJ1ZTEVMBMGCysG\r\nAQQBgql/AQsREwR0cnVlMRUwEwYLKwYBBAGCqX8BCwcTBHRydWUxFTATBgsrBgEE\r\
-        \nAYKpfwELBhMEdHJ1ZTEVMBMGCysGAQQBgql/AQsJEwR0cnVlMRUwEwYLKwYBBAGC\r\nqX8BCwgTBHRydWUxFTATBgsrBgEEAYKpfwELAxMEdHJ1ZTEVMBMGCysGAQQBgql/\r\
-        \nAQsCEwR0cnVlMRUwEwYLKwYBBAGCqX8BCwUTBHRydWUxFTATBgsrBgEEAYKpfwEL\r\nBBMEdHJ1ZTEVMBMGCysGAQQBgql/AQsBEwR0cnVlMRUwEwYLKwYBBAGCqX8BCxQT\r\
-        \nBHRydWUxFTATBgsrBgEEAYKpfwELFRMEdHJ1ZTETMBEGCisGAQQBgql/AQMTAzEw\r\nMDERMA8GCisGAQQBgql/AQ4TATIxFTATBgorBgEEAYKpfwEJEwVmYWxzZTESMBAG\r\
-        \nA1UEAxMJY2xvdWRiZWVzMRIwEAYDVQQLEwljbG91ZGJlZXMxFjAUBgsrBgEEAYKp\r\nfwELGBMFZmFsc2UwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDuyvM/\r\
-        \n/pXwLB9DUDG3n9G9z4KznFb84hD8o4zSQB8Er9RaHqdZdoiIpeJT9TaHQrJCg4Nx\r\nYois/Q5PEiHulcF2m/FTbcEHqZe/TJcNheq8bteBy4TuACCKaiKeLHuytwLPkbf/\r\
-        \noMD+N4GEWbDaCh9PyBvLdbe3weCdy7DW5r4PYIUzuLSG/v5XYCWZ4MzTmj4vcZVK\r\nff270pQbKgRReLvYyHg3AIg9xJIjM6FApEEDa8j89UpfIbJw2BfzeoKWd28bEVo5\r\
-        \n+ShBcsiAp5VOoXmHmX/H9ek0Utd0JUA4vL/iCvplaKkPGKVm3PMoXwWBu7dBCZFi\r\nqLU6OFpuUP75ZYeBAgMBAAGjOjA4MAwGA1UdEwQFMAMBAf8wHQYDVR0OBBYEFBuU\r\
-        \nDZQARKhqIo2sRMlLjDpM0ydDMAkGA1UdIwQCMAAwDQYJKoZIhvcNAQEFBQADggIB\r\nAKVrXzmT5MrvLdGg5dqFseGi5L0iZzgnOj79CIbLw9N0LqFRFJGie/PxhCxWdsXS\r\
-        \nmLUNqQDGnjKwekEtmGtxFhcTcc68MDaBdiJi+ckXma61hkf61uLbl8zw5wULyJRc\r\nPuz0heBjqCIULO3oSvhPu6bOzW9eXnMwhHMHvg2jZDpgCTXUY6FhahRnVTHFFyf5\r\
-        \nknKUE1040dpVmaXaeRW+usLvmpgmhEZcex25V8kKZPa8KfbSD4nABn2+MR5QmJgL\r\nQIubD2GS+tc/2tDlK9ErVI2c0uBpbPlvQTVjHPmvLxnwSraFiRT/rZUiErIN/Izv\r\
-        \nlA7jIUnJrTdnl2anyspbbdBF2UDxQ8fLlxjAXxTR2259bQCRIrCSRUb76bWNJdEr\r\n1o/jusfYbOlD0OPWe93X9tZ0W5eBUu2A3dUC/zC4KkIlKBSH5Ublc2cVm6EDCBfR\r\
-        \njp2heQl+DTPo8VzPQtETvunEy3semoMaqoNMc7XDypVLginodhx9ArwCOpmJirIi\r\nf+oAw/ErBT8WEjtyfd3qnvApolX7aEh8zo0x90Ig2seNM+xhkpqugQM62Okh5krF\r\
-        \nmq3UCWkTBw3LI7YlR63CldmMuGp96YisBJLMeh0gFYu9zHqOCeVW5VQNGgsoYdO0\r\nUfX9FZGiRvNnDde+fNK/xXwSVwhNCIDEH4IbOdoBbrb/\r\
-        \n-----END CERTIFICATE-----\r\n"
-      key: "-----BEGIN RSA PRIVATE KEY-----\r\nMIIEowIBAAKCAQEA7srzP/6V8CwfQ1Axt5/Rvc+Cs5xW/OIQ/KOM0kAfBK/UWh6n\r\
-        \nWXaIiKXiU/U2h0KyQoODcWKIrP0OTxIh7pXBdpvxU23BB6mXv0yXDYXqvG7XgcuE\r\n7gAgimoinix7srcCz5G3/6DA/jeBhFmw2gofT8gby3W3t8Hgncuw1ua+D2CFM7i0\r\
-        \nhv7+V2AlmeDM05o+L3GVSn39u9KUGyoEUXi72Mh4NwCIPcSSIzOhQKRBA2vI/PVK\r\nXyGycNgX83qClndvGxFaOfkoQXLIgKeVTqF5h5l/x/XpNFLXdCVAOLy/4gr6ZWip\r\
-        \nDxilZtzzKF8Fgbu3QQmRYqi1OjhablD++WWHgQIDAQABAoIBADPygKJuTs31u0NY\r\ngchRgz5Ik0VhgGb5AvsC1VKz0kuhuI92Va+XorIfbDIZiSg5sS/ZDlIvPk5rqp42\r\
-        \n8pzFhVW5LPGaUcDJ+xIJpl6xwFQHxOgejyd7bZjO6AMC6FIDkB/5sk5w+SsUhh91\r\np4x3YUJo5OsJC9N04NlTA4Bsp/IOALHY1a/yjbjqxGo0X/6Ac8suZyRK9uCU6QT3\r\
-        \nVZMWXHm9QK1M4PZUd8Oo3LsXoY2sqxUsKkR4lPV7oUdcWQSshonE3KEPv8nxxWnB\r\nYUbs1nIpwjJK9xPUVaRCU5SdDi9vKCLQn6v/C23N4fSpI3wH00iQJSa8sCTWu47J\r\
-        \nKS1bwJUCgYEA/QOlPt9kmxvxJswQUxhfS6RzOJUE44hGvdqVW6MZ92lImqMuCwfA\r\nFeiRQgr0igfhqP/jqLaMGnE5hnMk2ORohoWjuketz+MA9K6krCTs338ivcNEpPDT\r\
-        \n/yP41tD3uQeFHVsHQZpDYVQ94tcMPVdIHanEdQWX27eL1F3bSzRtbhMCgYEA8ZxX\r\nfFIAhx4xOGzx7JSrpwtN5t5W1s1l2VfKpKbCCVTNu89fYsagzy8Txow/B1k6/y+F\r\
-        \nYvHGrZAHmQsEJ0MZCC5e+8Hgvhh+4AVjMNaRE+/cQdjJcmWDz3M+B5BNliJpt0wf\r\nPsG55Kgi2QoABQiwRJkFn4jveK6GYLlp595g1psCgYB1nTk2pd/9npqWX2wDRKQf\r\
-        \n5J1PIy63moTQAolFpOcQNNf0UoC3ze2EAa1slu0gMRO8XN92cQ1lyVZlYqcxT9Qr\r\nHHqEwIdSyQKLu5d/ElcuecorjlcdmXni89Tb/x343D8L62HPJCfIWcG+7hqZdTZn\r\
-        \n26Agie4SzBrrKIolRoTMEwKBgQC0blrvHpYCUcvUJZftY4Fk+A4vMS+Mrks3KlbM\r\n6zPQoCIb9Vt4enkxACk2hxmytTJXy/dC0ufaSctCwXVSlMsmzupj/H+HtudZCOzw\r\
-        \nVex2BRRpoCmgYqsyyw8xutQWIJDuL8zNowLd/ao4hz1IhRqNv/DxGOQtLbhwl0a9\r\nv9Z1rQKBgGNUn/VSEL3iBIyzHc4ScjFD0KABV9vMhgWRIR7cg6ArlTNsWMyQKS0s\r\
-        \nDabyMPQaKQhUHgvX1X4i1kHNwoHeoPpgExE5MADAc32aeTwVGuAqdKcwUkor00rf\r\nSGkAab+zkczf9Lzo5tOAHEA02XCuZEXmXboFJV5s05IkxKDNr0O8\r\
-        \n-----END RSA PRIVATE KEY-----\r\n"
-    masterprovisioning:
-      dockerImageDefinitionConfiguration:
         images:
         - imageTag: "cloudbees/cloudbees-core-mm:2.332.2.6"
           name: "CloudBees CI - Managed Controller - 2.332.2.6"
