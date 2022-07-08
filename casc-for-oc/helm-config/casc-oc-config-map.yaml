@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: casc-oc
+  name: oc-casc-bundle
 data:
   bundle.yaml: |
     apiVersion: "1"
