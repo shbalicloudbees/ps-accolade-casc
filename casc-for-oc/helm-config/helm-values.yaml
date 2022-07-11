@@ -1,38 +1,15 @@
 OperationsCenter:
-  HostName: ci.example.com
-  CSRF:
-    ProxyCompatibility: true
-  Annotations:
-    prometheus.io/path: "/prometheus"
-    prometheus.io/port: "8080"
-    prometheus.io/scrape: "true"
-  Ingress:
-    Annotations:
-      cert-manager.io/cluster-issuer: letsencrypt-prod
-      kubernetes.io/tls-acme: 'true'
-      kubernetes.io/ingress.class: nginx
-    tls:
-      Enable: true
-      Host: ci.example.com
-      SecretName: tls-ci-example-com
-  JavaOpts:
-    -Djenkins.install.runSetupWizard=false
-    -Dcore.casc.config.bundle=/var/jenkins_config/oc-casc-bundle
+  CasC:
+    Enabled: true
   ExtraVolumes:
-  - name: casc-oc-volume
+  - name: oc-casc-bundle
     configMap:
-      name: casc-oc
+      name: oc-casc-bundle
+      optional: true
   ExtraVolumeMounts:
-  - name: casc-oc-volume
+  - name: oc-casc-bundle
     mountPath: /var/jenkins_config/oc-casc-bundle
     readOnly: true
+  JavaOpts:
+    -Dcore.casc.config.bundle=/var/jenkins_config/oc-casc-bundle
 
-Agents:
-  Enabled: true
-  SeparateNamespace:
-    Enabled: true
-    Name: ci-agents
-    Create: true
-
-Hibernation:
-  Enabled: true
